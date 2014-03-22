@@ -1,0 +1,41 @@
+# K&R
+my @names = (
+	'Damian',	# 主キー
+	'Mtthew',	# デスアンビギュエータ
+	'Conway',	# 汎用クラスまたはカテゴリ
+);
+
+for my $name ( @names ) {
+	for my $word ( anagrams_of(lc $name) ){
+		print "$word\n";
+	}
+}
+
+# BSD
+
+
+my @names = 
+(
+	'Damian',	# 主キー
+	'Mtthew',	# デスアンビギュエータ
+	'Conway',	# 汎用クラスまたはカテゴリ
+);
+
+for my $name ( @names ) 
+{
+	for my $word ( anagrams_of(lc $name) )
+	{
+		print "$word\n";
+	}
+}
+
+
+# GNU
+
+for my $name ( @names ) 
+	{
+		for my $word ( anagrams_of(lc $name) )
+		{
+			print "$word\n";
+		}
+	}

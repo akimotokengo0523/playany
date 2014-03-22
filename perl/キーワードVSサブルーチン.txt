@@ -1,0 +1,40 @@
+# keyword
+
+
+Åõ
+for my $result ( @results ) {
+	print_sep();
+	print $result;
+}
+
+Å~
+for(@results){
+	print_sep();
+	print $result;
+}
+
+# sub
+
+Åõ
+my @candidates = get_candidates($marker);
+
+CANDIDATE:
+for my $i ( 0..$#condidates ){
+	next COANDIDATE if open_region($i);
+	
+	$condidates[$i]
+		= $incumbent{ $condidates[$i]{region} };
+}
+
+Å~
+
+my @candidates = get_candidates ($marker);
+
+CANDIDATE:
+for my $i ( 0..$#condidates ) {
+	next COANDIDATE if open_region ($i);
+	
+	$condidates[$i]
+		= $incumbent { $condidates [$i] {region} };
+}
+

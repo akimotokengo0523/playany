@@ -1,0 +1,28 @@
+# 組込関数
+
+○
+while (my $record = <$results_file> ) {
+	chomp $record;
+	my ($name,$votes) = split "\t" , $record;
+	print 'Votes for' ,
+	      substr($name , 0, 10),    # 優先度を適用する為にかっこが必要
+	      ": $votes (verified)\n";
+}
+
+×
+while (my $record = <$results_file> ) {
+	chomp($record);
+	my ($name,$votes) = split("\t",$record);
+	print 'Votes for' ,
+	      substr($name , 0, 10),    # 優先度を適用する為にかっこが必要
+	      ": $votes (verified)\n";
+}
+
+×
+while (my $record = <$results_file> ) {
+	chomp ($record);
+	my ($name,$votes) = split ("\t",$record);
+	print 'Votes for' ,
+	      substr ($name , 0, 10),    # 優先度を適用する為にかっこが必要
+	      ": $votes (verified)\n";
+}
